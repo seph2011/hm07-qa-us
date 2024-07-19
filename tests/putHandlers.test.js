@@ -24,8 +24,7 @@ test('Response should be "ok"', async () => {
 	expect(actualResponseBody["ok"]).toBe(true);
 });
 
-test('Status should be 200', async () => {
-    let data
+test('Status should be 200', async () => {  
 	let actualStatus
 	try {
 		const response = await fetch(`${config.API_URL}/api/v1/products/2`, {
@@ -34,8 +33,7 @@ test('Status should be 200', async () => {
 			'Content-Type': 'application/json'
 			},
 			body: JSON.stringify(requestBody)
-		});
-		data = await response.json();
+		});		
 		actualStatus = response.status;}
 	catch (error) {
 		console.error(error);
