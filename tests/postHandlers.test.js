@@ -33,7 +33,6 @@ test('response includes all of the warehouses', async () => {
 
 test('status should be 200', async () => {
     let actualStatus
-	let data
     try {
 
         const response = await fetch(`${config.API_URL}/api/v1/warehouses/amount`, {
@@ -42,9 +41,7 @@ test('status should be 200', async () => {
 			'Content-Type': 'application/json'
 			},
 			body: JSON.stringify(requestBody)
-		});
-		data = await response.json();
-        
+		});        
         actualStatus = response.status;
     } catch (error) {
         console.error(error);
