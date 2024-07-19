@@ -26,7 +26,7 @@ test('all couriers to have opening and closing times', async () => {
 	} catch (error) {
 		console.error(error);
 	}
-	const result = []
+	
 	const data = await response.json();
 	for (let i = 0; i < data.length; i++) {
         const startWorkingHours = data[i]["workingHours"]["start"];

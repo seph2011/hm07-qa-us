@@ -2,7 +2,7 @@
 const config = require('../config');
 
 test('Response should be "ok"', async () => {
-    let response
+	let response
 	let actualResponseBody
 	try {
 		response = await fetch(`${config.API_URL}/api/v1/kits/7`, {
@@ -23,7 +23,7 @@ test('status should be 200', async () => {
 			method: 'DELETE',
 			
 		});
-		const data = await response.json();
+		
 		actualStatus = response.status;
 	} catch (error) {
 		console.error(error);

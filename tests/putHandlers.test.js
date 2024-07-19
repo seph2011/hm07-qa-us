@@ -5,7 +5,7 @@ const requestBody = {
 	"price" : 175
 }
 
-test('Response should be "ok : true"', async () => {
+test('Response should be "ok"', async () => {
     let response
 	let actualResponseBody
 	try {
@@ -19,13 +19,15 @@ test('Response should be "ok : true"', async () => {
 		actualResponseBody = await response.json();
 		
 	} catch (error) {
-		
+		console.error(error);
 	}
 	expect(actualResponseBody["ok"]).toBe(true);
 });
 
 test('Status should be 200', async () => {
-    try {
+    let data
+	let actualStatus
+	try {
 		const response = await fetch(`${config.API_URL}/api/v1/products/2`, {
 			method: 'PUT',
 			headers: {
@@ -35,9 +37,8 @@ test('Status should be 200', async () => {
 		});
 		data = await response.json();
 		actualStatus = response.status;}
-	 catch (error) {
+	catch (error) {
 		console.error(error);
 	}
-	
 	expect(actualStatus).toBe(200);
 });
