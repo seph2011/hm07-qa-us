@@ -23,7 +23,7 @@ test('status should be 200', async () => {
 			method: 'DELETE',
 			
 		});
-		const data = await response.json();
+		
 		actualStatus = response.status;
 	} catch (error) {
 		console.error(error);
