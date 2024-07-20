@@ -1,4 +1,4 @@
 // eslint-disable-next-line no-undef
 module.exports = {
-    API_URL: "https://cnt-d08dd6f0-ae55-431a-b9f7-e80f6da86f98.containerhub.tripleten-services.com"
+    API_URL: "https://cnt-46fc9609-371e-4d2d-964a-24e8fc10318e.containerhub.tripleten-services.com"
 }

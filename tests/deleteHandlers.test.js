@@ -18,7 +18,6 @@ test('DELETE test 1 checks that the kit DELETE endpoint actually deletes a kit',
 	} catch (error) {
 		console.error(error);
 	}
-	console.log(kitResponse);
 	let response
 	let actualResponseBody
 //deletes the made kit
@@ -32,6 +31,7 @@ test('DELETE test 1 checks that the kit DELETE endpoint actually deletes a kit',
 	}
 	expect(actualResponseBody["ok"]).toBe(true);
 //tries to get deleted kit
+	let actualStatus
 	try {
 
         const response = await fetch(`${config.API_URL}/api/v1/kits/${kitResponse.id}`);

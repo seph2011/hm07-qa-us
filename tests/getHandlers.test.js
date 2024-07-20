@@ -13,12 +13,11 @@ test('GET test 1 checks that all deliveries have later close time than opening t
     for (let i = 0; i < data.length; i++) {
         const startWorkingHours = data[i]["workingHours"]["start"];
         const endWorkingHours = data[i]["workingHours"]["end"];
-        console.log(`Courier: ${data[i].name}, Start: ${startWorkingHours}, End: ${endWorkingHours}`);
         result.push(startWorkingHours < endWorkingHours);
     }
     expect(result).not.toContain(false);
 });
-//note for reviewer: I've triple-checked this and I keep getting a [true,true,true, true] result for GET test 1. Please let me know what I may have missed. Thank you for all your help!
+//note for reviewer: I've triple-checked this and I keep getting a [true, true, true, true] result for GET test 1. Please let me know what I may have missed. Thank you for all your help!
 
 test('GET test 2 checks that all couriers to have opening and closing times', async () => {
 	let response;
