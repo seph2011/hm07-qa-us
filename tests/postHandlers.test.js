@@ -9,7 +9,7 @@ const requestBody = {
 	]
 }
 
-test('response includes all of the warehouses', async () => {
+test('POST test 2 checks that response includes all of the warehouses', async () => {
     let response;
 	let data
 	try {
@@ -31,7 +31,7 @@ test('response includes all of the warehouses', async () => {
 	expect(Object.keys(data).toString()).toBe('Everything You Need,Food City,Big World,Fresh Food')
 });
 
-test('status should be 200', async () => {
+test('POST test 2 checks that status is 200', async () => {
     let actualStatus
     try {
 

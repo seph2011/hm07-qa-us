@@ -5,7 +5,7 @@ const requestBody = {
 	"price" : 175
 }
 
-test('Response should be "ok"', async () => {
+test('PUT test 1 checks that response should be "ok"', async () => {
     let response
 	let actualResponseBody
 	try {
@@ -24,7 +24,7 @@ test('Response should be "ok"', async () => {
 	expect(actualResponseBody["ok"]).toBe(true);
 });
 
-test('Status should be 200', async () => {  
+test('PUT test 2 checks that status is 200', async () => {  
 	let actualStatus
 	try {
 		const response = await fetch(`${config.API_URL}/api/v1/products/2`, {
